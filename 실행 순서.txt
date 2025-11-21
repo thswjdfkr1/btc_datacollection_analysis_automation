@@ -1,0 +1,8 @@
+# 서버열기
+1. cd C:\Users\thswj\Desktop
+2. uvicorn server:app --reload
+
+# 클라이언트 실행
+1. cd C:\Users\thswj\Desktop
+2. python client.py
+
