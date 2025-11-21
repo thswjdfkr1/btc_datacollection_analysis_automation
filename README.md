@@ -7,15 +7,15 @@
 API를 활용한 비트코인 가격 데이터 수집과 LLM을 활용한 보고서 작성 자동화 및 웹페이지 게시  
 
 # 구조
-project/
-│
-├─ server.py                 # FastAPI 서버
-├─ client.py                 # 보고서 전송 클라이언트
-│
-└─ aa/
-   ├─ btc_report.md          # 생성된 Markdown 보고서
-   └─ images/
-        └─ chart_1301.png    # 차트/시각화 이미지
+project/  
+│  
+├─ server.py                 # FastAPI 서버   
+├─ client.py                 # 보고서 전송 클라이언트  
+│  
+└─ aa/  
+   ├─ btc_report.md          # 생성된 Markdown 보고서  
+   └─ images/  
+        └─ chart_1301.png    # 차트/시각화 이미지   
                  
 # Finance API  
 1. 데이터 수집  
