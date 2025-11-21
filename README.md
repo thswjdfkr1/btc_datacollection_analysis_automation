@@ -22,7 +22,7 @@ project/
    (1) BTCUSDT 5분봉 데이터 100개를 수집 시작  
    (2) 5분 간격으로 10번 반복하여 추가 데이터 수  
    
-2. 데이터 전처리
+2. 데이터 전처리    
    (1) 마지막 시간을 기준으로 중복 데이터 삭제    
    (2) timestamp, open, high, low, close, volume 등 csv 파일로 저장  
     
