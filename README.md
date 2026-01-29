@@ -52,46 +52,21 @@ project/
        - 3. 단기 투자자 관점에서 리스크 요인을 2가지 제시해줘.  
        - 4. 다음 시점(5분 후)에 대한 간략한 가격 전망을 작성해줘.  
        - 5. 마지막으로 "요약 및 결론" 한 문장을 작성해줘   
-        - 전문적이고 보고서 스타일의 톤으로, 섹션별로 Markdown 형식으로 구분해줘.     
+        - 전문적이고 보고서 스타일의 톤으로, 섹션별로 Markdown 형식으로 구분해줘.       
        
-# Tool 정의 
-```
-tools = [
-    Tool(
-        name = 'Analysis_Data',
-        func = analysis_data_summary,
-        description = '비트코인 데이터 통계분석'
-    ),
-    Tool(
-        name = "Create_Chart",
-        func = create_chart,
-        description = "비트코인 가격 차트 이미지"
-    ),
-    Tool(
-        name = "Generate_Report",
-        func = generate_report,
-        description = "AI 보고서 생성"
-    )
-]
-```  
-
-# 에이전트 구성
+# 에이전트 구성   
+model = 'gpt-4o-mini'  
 ```  
 prompt = """당신은 비트코인 시장 분석 전문가입니다.
 도구를 적절히 활용해 아래 요청에 답변하세요.
-도구 사용이 끝나면 결과를 전문 보고서 형태로 Markdown으로 정리하세요."""
+도구 사용이 끝나면 결과를 전문 보고서 형태로 Markdown으로 정리하세요."""    
 ```
 
-# 보고서 생성 및 저장
-- 'gpt-4o-mini'
-
-``` 
-response = agent.invoke({"input" : "비트코인 시장 분석 보고서를 생성해줘."})
-```
-(1) 정의한 Tool과 LLM을 활용한 비트코인 분석 보고서 작성   
-(2) HTML, .MD 형식으로 생성된 보고서 저장    
+response = agent.invoke({"input" : "비트코인 시장 분석 보고서를 생성해줘."})  
+- 정의한 Tool과 LLM을 활용한 비트코인 분석 보고서 작성
+- HTML, .MD 형식으로 생성된 보고서 저장    
 
 # 웹페이지 게시  
-(1) FastAPI를 활용한 서버 구축    
-(2) FastAPI 내에서 HTML에 포함된 이미지 경로 변경 및 서버 저장   
-(3) client 함수를 정의하여 저정된 HTML 파일을 웹페이지에 게시
+- FastAPI를 활용한 서버 구축
+-  FastAPI 내에서 HTML에 포함된 이미지 경로 변경 및 서버 저장
+-   lient 함수를 정의하여 저정된 HTML 파일을 웹페이지에 게시
